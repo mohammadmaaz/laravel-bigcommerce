@@ -1,0 +1,55 @@
+{
+    "name": "folio3/laravel-bigcommerce-app",
+    "description": "This package is a utility tool to install bigcommerce app build on laravel",
+    "keywords": [
+        "folio3",
+        "laravel-bigcommerce-app"
+    ],
+    "homepage": "https://github.com/folio3/laravel-bigcommerce-app",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Muhammad Maaz",
+            "email": "muhammadmaaz@folio3.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Folio3\\LaravelBigcommerceApp\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Folio3\\LaravelBigcommerceApp\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Folio3\\LaravelBigcommerceApp\\LaravelBigcommerceAppServiceProvider"
+            ],
+            "aliases": {
+                "LaravelBigcommerceApp": "Folio3\\LaravelBigcommerceApp\\LaravelBigcommerceAppFacade"
+            }
+        }
+    }
+}
